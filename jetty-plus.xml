@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure_9_0.dtd">
+
+<!-- =============================================================== -->
+<!-- Configure extended support for webapps                          -->
+<!-- =============================================================== -->
+<Configure id="Server" class="org.eclipse.jetty.server.Server">
+
+  <!-- =========================================================== -->
+  <!-- Add plus Configuring classes to all webapps for this Server -->
+  <!-- =========================================================== -->
+  <Call class="org.eclipse.jetty.webapp.Configuration$ClassList" name="setServerDefault">
+    <Arg><Ref refid="Server" /></Arg>
+    <Call name="addAfter">
+      <Arg name="afterClass">org.eclipse.jetty.webapp.FragmentConfiguration</Arg>
+      <Arg>
+          <Array id="plusConfig" type="java.lang.String">
+              <Item>org.eclipse.jetty.webapp.WebInfConfiguration</Item>
+              <Item>org.eclipse.jetty.webapp.WebXmlConfiguration</Item>
+              <Item>org.eclipse.jetty.webapp.MetaInfConfiguration</Item>
+              <Item>org.eclipse.jetty.webapp.FragmentConfiguration</Item>
+              <Item>org.eclipse.jetty.plus.webapp.EnvConfiguration</Item>        <!-- added for JNDI -->
+              <Item>org.eclipse.jetty.plus.webapp.PlusConfiguration</Item>       <!-- added for JNDI -->
+              <Item>org.eclipse.jetty.annotations.AnnotationConfiguration</Item> <!-- added for annotations -->
+              <Item>org.eclipse.jetty.webapp.JettyWebXmlConfiguration</Item>
+              <Item>org.eclipse.jetty.webapp.TagLibConfiguration</Item>
+          </Array>
+      </Arg>
+    </Call>
+  </Call>
+
+</Configure>
+

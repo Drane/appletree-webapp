@@ -1,0 +1,44 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Jetty 9.0.4.v20130625" type="JettyConfiguration" factoryName="Remote" APPLICATION_SERVER_NAME="Jetty 9.0.4.v20130625" show_console_on_std_out="true" show_console_on_std_err="true">
+    <option name="LOCAL" value="false" />
+    <option name="OPEN_IN_BROWSER" value="false" />
+    <deployment />
+    <server-settings>
+      <data>
+        <option name="jndiPort" value="4000" />
+        <option name="targets">
+          <list>
+            <StagingTargetModelImpl>
+              <option name="name" value="STAGING" />
+              <option name="stagingRemotePath" value="" />
+              <option name="transportStagingTarget">
+                <TransportTarget>
+                  <option name="id" value="0010056b-7ff6-4bf1-b405-aca5aea5a9bf" />
+                </TransportTarget>
+              </option>
+            </StagingTargetModelImpl>
+            <WatchedTargetModelImpl>
+              <option name="name" value="CONTEXT" />
+              <option name="transportStagingTarget">
+                <TransportTarget>
+                  <option name="id" value="7c9d5056-5176-4225-ba9f-40c48a520682" />
+                </TransportTarget>
+              </option>
+              <option name="watchedLocalPath" value="$PROJECT_DIR$" />
+            </WatchedTargetModelImpl>
+          </list>
+        </option>
+      </data>
+    </server-settings>
+    <predefined_log_file id="Jetty" enabled="true" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="4000" />
+      <option name="TRANSPORT" value="0" />
+      <option name="LOCAL" value="false" />
+    </RunnerSettings>
+    <RunnerSettings RunnerId="Run" />
+    <ConfigurationWrapper RunnerId="Debug" />
+    <ConfigurationWrapper RunnerId="Run" />
+    <method />
+  </configuration>
+</component>
